@@ -1,7 +1,7 @@
 commit-msg:
   commands:
     convencional-commit: 
-      run: npm commitlint --edit
+      run: npx commitlint --edit
 
 pre-commit:
   jobs:
