@@ -1,0 +1,15 @@
+commit-msg:
+  commands:
+    convencional-commit: 
+      run: npx commitlint --edit
+
+pre-commit:
+  jobs:
+    - name: lint
+      run: npm run lint
+
+pre-push: 
+  jobs:
+    - name: test
+      run: npm run test
+
