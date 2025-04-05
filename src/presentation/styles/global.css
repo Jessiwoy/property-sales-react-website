@@ -1,2 +1,21 @@
-@import "../../../node_modules/tailwindcss/dist/lib.d.mts";
+@import "tailwindcss";
 
+/* CSS para alinhar as margens do body*/
+.layout {
+    @apply max-w-[1280px] w-full px-[4em] mx-auto;
+}
+/* Colocando fonte no projeto */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Animação dos botões */
+button {
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.05);
+}

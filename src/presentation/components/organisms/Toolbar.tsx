@@ -1,5 +1,4 @@
-// Será usado quando o React Router estiver configurado
-//import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import logo from '../../../assets/logo.png'
 import { colors } from "../../../shared/constant/colors.ts"
 
@@ -9,7 +8,7 @@ interface ToolbarProps {
 
 // Define o componente `Toolbar`, que recebe `showButtons` como propriedade opcional
 export const Toolbar = ({ showButtons = false }: ToolbarProps) => {
-    // const navigate = useNavigate()
+     const navigate = useNavigate()
 
     return (
         // O header atua como a barra de navegação
@@ -34,7 +33,7 @@ export const Toolbar = ({ showButtons = false }: ToolbarProps) => {
                         <button
                             className="text-white px-4 py-1 text-xs rounded h-[2.3em] w-[7em]"
                             style={{ background: colors.primary }}
-                            //onClick={() => navigate('/login')}
+                            onClick={() => navigate('/login')}
                         >
                             Sair
                         </button>

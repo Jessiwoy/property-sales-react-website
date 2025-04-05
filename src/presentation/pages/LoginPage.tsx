@@ -1,7 +1,6 @@
 import { CardLogin } from '../components/molecules/CardLogin'
 import { BackgroundImageText } from '../components/molecules/BackgroundImageText'
 import { Toolbar } from '../components/organisms/Toolbar'
-// To-do: Verificar tamanho da imagem
 import imageBg from '../../assets/loginHero.png'
 
 // Definição do componente funcional LoginPage

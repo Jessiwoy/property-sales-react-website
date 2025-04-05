@@ -1,6 +1,5 @@
 import { useState } from 'react'
-// será usado quando o React Router estiver configurado
-//import { useNavigate } from 'react-router-dom'
+import { useNavigate } from "react-router-dom"
 import { Button } from '../atoms/Button'
 import { Input } from '../atoms/Input'
 import { Text } from '../atoms/Text'
