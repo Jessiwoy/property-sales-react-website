@@ -11,7 +11,6 @@ export const Toolbar = ({ showButtons = false }: ToolbarProps) => {
      const navigate = useNavigate()
 
     return (
-        // O header atua como a barra de navegação
         <header className="flex items-center justify-between px-6 py-4" style={{ background: colors.secondary }}>
             {/* Div interna que contém toda a estrutura da toolbar */}
             <div className="layout flex items-center justify-between w-full">
