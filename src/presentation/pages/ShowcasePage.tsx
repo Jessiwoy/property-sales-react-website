@@ -4,7 +4,9 @@ import { BackgroundImageText } from '../components/molecules/BackgroundImageText
 import { ServiceBadge } from '../components/molecules/ServiceBadge'
 import { PropertyCard } from '../components/molecules/PropertyCard'
 import { PropertyModal } from '../components/organisms/PropertyModal'
-//import { PropertyType } from
+import {PropertyType} from "../../shared/types/PropertyType.ts";
+import data from '../../../data.json'
+
 
 import imgBgHero from '../../assets/showcaseHero.png'
 import residencial from '../../assets/pictures/residencial.png'
@@ -20,7 +22,6 @@ const services = [
     { image: hotel, title: 'Hotéis', count: '22 ofertas' },
 ]
 
-// to-do: criar json
 // Conversão dos dados do JSON para objetos do tipo PropertyType
 const properties: PropertyType[] = data.map((item) => ({
     image: item.image,
