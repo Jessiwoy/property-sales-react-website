@@ -25,9 +25,10 @@ export const Toolbar = ({ showButtons = false }: ToolbarProps) => {
                 {showButtons && (
                     <div className="flex gap-4">
                         {/* Botão "Contato" */}
-                        <button className="text-white text-xs px-4 py-1">
+                        <a href="#contato" className="text-white text-xs px-4 py-1">
                             Contato
-                        </button>
+                        </a>
+
                         {/* Botão "Sair" que redireciona para a página de login */}
                         <button
                             className="text-white px-4 py-1 text-xs rounded h-[2.3em] w-[7em]"

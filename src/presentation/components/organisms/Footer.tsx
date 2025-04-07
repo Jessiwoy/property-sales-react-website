@@ -5,7 +5,7 @@ import {
     FaTwitter,
     FaChevronUp,
 } from 'react-icons/fa'
-import {colors} from "../../../shared/constant/colors.ts";
+import { colors } from "../../../shared/constant/colors.ts"
 
 export const Footer = () => {
     const scrollToTop = () => {
@@ -16,9 +16,9 @@ export const Footer = () => {
         <footer className="w-full px-8 py-10 flex justify-between items-start text-white text-sm relative"
                 style={{ backgroundColor: colors.black[600] }}>
             {/* Coluna Contato */}
-            <div className="layout flex items-center justify-between">
+            <div className="layout flex items-center justify-between" id="contato">
                 <div className="flex flex-col gap-2">
-                    <h3 className="text-base mb-4 " style={{ color: colors.primary }}>
+                    <h3 className="text-base mb-4" style={{ color: colors.primary }}>
                         Contato
                     </h3>
                     <p>agencia_batatinha@contato</p>
@@ -26,10 +26,34 @@ export const Footer = () => {
 
                     <div className="flex gap-4 mt-4 text-xl text-white"
                          style={{ color: colors.gray[500] }}>
-                        <FaFacebookF />
-                        <FaInstagram />
-                        <FaYoutube />
-                        <FaTwitter />
+                        <a
+                            href="https://www.facebook.com/compass.uol"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <FaFacebookF className="cursor-pointer hover:text-white" />
+                        </a>
+                        <a
+                            href="https://www.instagram.com/compass.uol/?hl=pt-br"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <FaInstagram className="cursor-pointer hover:text-white" />
+                        </a>
+                        <a
+                            href="https://www.youtube.com/c/Compassuol"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <FaYoutube className="cursor-pointer hover:text-white" />
+                        </a>
+                        <a
+                            href="https://x.com/compassuol"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <FaTwitter className="cursor-pointer hover:text-white" />
+                        </a>
                     </div>
                 </div>
 
@@ -38,7 +62,7 @@ export const Footer = () => {
                     Feito com ♥ por Jessica Woytuski - Todos os Direitos Reservados
                 </div>
 
-                {/* Botão scroll top */}
+                {/* Botão scroll-top */}
                 <button
                     onClick={scrollToTop}
                     className="bg-white text-black p-2 rounded-full shadow-md hover:scale-110 transition"
