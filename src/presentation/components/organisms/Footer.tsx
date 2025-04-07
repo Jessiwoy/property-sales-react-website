@@ -16,7 +16,8 @@ export const Footer = () => {
         <footer className="w-full px-8 py-10 flex justify-between items-start text-white text-sm relative"
                 style={{ backgroundColor: colors.black[600] }}>
             {/* Coluna Contato */}
-            <div className="layout flex items-center justify-between" id="contato">
+
+            <div className="layout flex items-center justify-between"  id="contato">
                 <div className="flex flex-col gap-2">
                     <h3 className="text-base mb-4" style={{ color: colors.primary }}>
                         Contato

@@ -63,7 +63,7 @@ const NotFoundPage = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <FaTwitter size={18} className="text-black cursor-pointer hover:text-blue-600" />
+                    <FaTwitter size={18} className="text-black cursor-pointer text-600" />
                 </a>
             </footer>
         </div>
