@@ -34,10 +34,31 @@ const NotFoundPage = () => {
 
             {/* Footer social */}
             <footer className="w-full flex justify-start items-center gap-6 px-60 pb-10">
-                <FaFacebookSquare size={22} className="text-black cursor-pointer" />
-                <FaInstagram size={18} className="text-black cursor-pointer" />
-                <FaYoutube size={18} className="text-black cursor-pointer" />
-                <FaTwitter size={18} className="text-black cursor-pointer" />
+                <a
+                    href="https://www.facebook.com/compass.uol"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <FaFacebookSquare size={22} className="text-black cursor-pointer" />
+                </a>
+
+                <a
+                    href="https://www.instagram.com/compass.uol/?hl=pt-br"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <FaInstagram size={18} className="text-black cursor-pointer" />
+                </a>
+
+                <a
+                    href="https://www.youtube.com/c/Compassuol"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <FaYoutube size={18} className="text-black cursor-pointer" />
+                </a>
+
+                <FaTwitter size={18} className="text-black cursor-not-allowed opacity-50" title="Em breve" />
             </footer>
         </div>
     )
