@@ -4,6 +4,11 @@
 .layout {
     @apply max-w-[1280px] w-full px-[4em] mx-auto;
 }
+/* Efeito scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+
 /* Colocando fonte no projeto */
 body {
     font-family: 'Poppins', sans-serif;
