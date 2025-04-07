@@ -4,29 +4,61 @@ import { Button } from '../atoms/Button'
 import { Input } from '../atoms/Input'
 import { Text } from '../atoms/Text'
 import { colors } from "../../../shared/constant/colors.ts"
+import { validateLogin } from '../../../domain/validations/loginValidator.ts'
+
 
 export const CardLogin = () => {
     // Estados para os campos do formulário
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [confirmPassword, setConfirmPassword] = useState('')
+    const [message, setMessage] = useState('')
+    const [isError, setIsError] = useState(true)
     const [isRegistering, setIsRegistering] = useState(false)
+    const [tempUser, setTempUser] = useState<{ email: string; password: string } | null>(null)
 
     const navigate = useNavigate()
 
     // Função chamada ao clicar no botão de login
     const handleLogin = () => {
-        // Apenas navega sem validações
-        navigate('/showcase')
+        const result = validateLogin(email, password, tempUser)
+        setMessage(result.message)
+        setIsError(result.isError)
+
+        if (result.valid) {
+            setTimeout(() => {
+                navigate('/showcase')
+            }, 2000)
+        }
     }
 
     // Função chamada ao clicar no botão de registro
     const handleRegister = () => {
-        // Simula um cadastro e volta para tela de login
+        if (!email || !password || !confirmPassword) {
+            setMessage('Todos os campos são obrigatórios.')
+            setIsError(true)
+            return
+        }
+
+        if (password.length < 8) {
+            setMessage('A senha deve ter no mínimo 8 caracteres.')
+            setIsError(true)
+            return
+        }
+
+        if (password !== confirmPassword) {
+            setMessage('As senhas não coincidem.')
+            setIsError(true)
+            return
+        }
+
+        setTempUser({ email, password })
+        setIsRegistering(false)
         setEmail('')
         setPassword('')
         setConfirmPassword('')
-        setIsRegistering(false)
+        setMessage('Cadastro realizado com sucesso! Faça login.')
+        setIsError(false)
     }
 
     return (
@@ -65,6 +97,12 @@ export const CardLogin = () => {
                     <Button onClick={isRegistering ? handleRegister : handleLogin}>
                         {isRegistering ? 'Registrar' : 'Entrar'}
                     </Button>
+
+                    {message && (
+                        <span className={`text-sm mt-1 ${isError ? 'text-red-500' : 'text-green-600'}`}>
+                            {message}
+                         </span>
+                    )}
                 </div>
             </div>
 
