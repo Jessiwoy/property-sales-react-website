@@ -1,54 +1,111 @@
-# React + TypeScript + Vite
+🏠 Property Sales React Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação web para exibição de imóveis utilizando React, TypeScript, TailwindCSS e arquitetura escalável baseada em boas práticas como SOLID, Clean Code, Atomic Design e Domain-Driven Design (DDD).
 
-Currently, two official plugins are available:
+🚀 Como rodar o projeto localmente
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Clone o repositório
 
-## Expanding the ESLint configuration
+https://github.com/seu-usuario/property-sales-react-website.git
+cd property-sales-react-website
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+2. Instale as dependências
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+npm install
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+3. Inicie o servidor de desenvolvimento
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+npm run dev
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+Acesse http://localhost:5173 para visualizar o projeto rodando.
+
+🧪 Tecnologias utilizadas
+
+React 19 — Biblioteca principal da aplicação
+
+TypeScript — Tipagem estática
+
+Vite — Empacotador rápido para front-end
+
+TailwindCSS — Framework de estilos utilitários
+
+React Router DOM — Gerenciamento de rotas
+
+React Icons — Ícones em SVG
+
+Arquitetura Atomic Design
+
+Padrões SOLID + Clean Code
+
+DDD (Domain-Driven Design) para validações e lógica de domínio
+
+🧱 Estrutura de pastas
+
+src/
+├── app/                     # Configuração principal da aplicação
+├── domain/                  # Regras de negócio
+│   └── validations/         # Validações reutilizáveis e puras
+├── presentation/            # Camada visual (componentes/pages)
+│   ├── components/
+│   │   ├── atoms/           # Elementos básicos: botão, input, texto
+│   │   ├── molecules/       # Combinações simples: formulários
+│   │   └── organisms/       # Estruturas mais completas: cards, toolbar
+│   └── pages/               # Páginas da aplicação (Login, Showcase, NotFound)
+├── assets/                  # Imagens e ícones
+├── routes/                  # Gerenciamento de rotas da aplicação
+├── shared/                  # Constantes globais (ex: cores)
+└── main.tsx                 # Ponto de entrada da aplicação
+
+⚙️ Metodologias e Arquitetura
+
+🔹 Atomic Design
+
+Organização dos componentes em níveis de complexidade:
+
+Atoms: componentes puros e reaproveitáveis como Button, Input.
+
+Molecules: agrupamentos simples como formulários.
+
+Organisms: estruturas visuais mais robustas como CardLogin, Toolbar.
+
+🔹 SOLID + Clean Code
+
+Cada função ou componente tem uma única responsabilidade.
+Separação de responsabilidades entre UI e regras de negócio. Código limpo, sem acoplamentos desnecessários.
+
+🔹 Domain-Driven Design (DDD)
+
+Toda a lógica de validação e regras de negócio reside em domain/. Isso facilita testabilidade, reuso e separação clara de camadas.
+
+📄 Páginas e Fluxo
+
+LoginPage: Formulário com validação de email e senha, login simulado e modo de registro
+
+ShowcasePage: Página principal com serviços e propriedades em destaque
+
+NotFoundPage: Página de erro personalizada para rotas inválidas
+
+✅ Funcionalidades implementadas
+
+Login com validações de campos obrigatórios, formato e senha
+
+Registro de usuário temporário local
+
+Redirecionamento pós login com useNavigate
+
+Layout responsivo e organizado
+
+Componentes reaproveitáveis e padronizados
+
+📌 Próximos passos
+
+Conexão com API real para autenticação
+
+Gerenciamento de estado global (ex: Zustand ou Redux)
+
+Integração com banco de dados
+
+Upload de imagens e novos cadastros de imóveis
+
+Feito com 💛 por Jessica Woytuski • Agência Batatinha™
+
