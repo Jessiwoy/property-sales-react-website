@@ -1,8 +1,10 @@
-🏠 Property Sales React Website
+## 🏠 HomeFinder React Website
 
-Aplicação web para exibição de imóveis utilizando React, TypeScript, TailwindCSS e arquitetura escalável baseada em boas práticas como SOLID, Clean Code, Atomic Design e Domain-Driven Design (DDD).
+Aplicação web desenvolvida com React, TypeScript e TailwindCSS para facilitar a busca e visualização de imóveis. A arquitetura é escalável e orientada a boas práticas como SOLID, Clean Code, Atomic Design e Domain-Driven Design (DDD), garantindo organização, manutenibilidade e performance.
 
-🚀 Como rodar o projeto localmente
+---
+
+## ▶️ Como rodar o projeto localmente
 
 1. Clone o repositório
 
@@ -19,7 +21,9 @@ npm run dev
 
 Acesse http://localhost:5173 para visualizar o projeto rodando.
 
-🧪 Tecnologias utilizadas
+---
+
+## 🧰 Tecnologias utilizadas
 
 React 19 — Biblioteca principal da aplicação
 
@@ -39,8 +43,11 @@ Padrões SOLID + Clean Code
 
 DDD (Domain-Driven Design) para validações e lógica de domínio
 
-🧱 Estrutura de pastas
+---
 
+## 📁 Estrutura de pastas
+
+```text
 src/
 ├── app/                     # Configuração principal da aplicação
 ├── domain/                  # Regras de negócio
@@ -55,8 +62,10 @@ src/
 ├── routes/                  # Gerenciamento de rotas da aplicação
 ├── shared/                  # Constantes globais (ex: cores)
 └── main.tsx                 # Ponto de entrada da aplicação
+```
+---
 
-⚙️ Metodologias e Arquitetura
+## ⚙️ Metodologias e Arquitetura
 
 🔹 Atomic Design
 
@@ -77,7 +86,7 @@ Separação de responsabilidades entre UI e regras de negócio. Código limpo, s
 
 Toda a lógica de validação e regras de negócio reside em domain/. Isso facilita testabilidade, reuso e separação clara de camadas.
 
-📄 Páginas e Fluxo
+## 📄 Páginas e Fluxo
 
 LoginPage: Formulário com validação de email e senha, login simulado e modo de registro
 
@@ -85,7 +94,9 @@ ShowcasePage: Página principal com serviços e propriedades em destaque
 
 NotFoundPage: Página de erro personalizada para rotas inválidas
 
-✅ Funcionalidades implementadas
+---
+
+## ✅ Funcionalidades implementadas
 
 Login com validações de campos obrigatórios, formato e senha
 
@@ -97,15 +108,12 @@ Layout responsivo e organizado
 
 Componentes reaproveitáveis e padronizados
 
-📌 Próximos passos
+---
 
-Conexão com API real para autenticação
+## 📝 Licença
 
-Gerenciamento de estado global (ex: Zustand ou Redux)
+Projeto privado, desenvolvido exclusivamente para fins educacionais e internos.
 
-Integração com banco de dados
 
-Upload de imagens e novos cadastros de imóveis
-
-Feito com 💛 por Jessica Woytuski • Agência Batatinha™
+Feito com 💜 por Jessica Woytuski • Agência Batatinha™
 
