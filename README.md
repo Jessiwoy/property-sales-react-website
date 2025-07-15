@@ -1,4 +1,4 @@
-## 🏠 HomeFinder React Website
+## 🏠 Property Sales React Website
 
 Aplicação web desenvolvida com React, TypeScript e TailwindCSS para facilitar a busca e visualização de imóveis. A arquitetura é escalável e orientada a boas práticas como SOLID, Clean Code, Atomic Design e Domain-Driven Design (DDD), garantindo organização, manutenibilidade e performance.
 
@@ -8,7 +8,7 @@ Aplicação web desenvolvida com React, TypeScript e TailwindCSS para facilitar 
 
 1. Clone o repositório
 
-https://github.com/seu-usuario/property-sales-react-website.git
+https://github.com/Jessiwoy/property-sales-react-website.git
 cd property-sales-react-website
 
 2. Instale as dependências
@@ -114,6 +114,7 @@ Componentes reaproveitáveis e padronizados
 
 Projeto privado, desenvolvido exclusivamente para fins educacionais e internos.
 
+---
 
-Feito com 💜 por Jessica Woytuski • Agência Batatinha™
+<p align="center">Feito com 💜 por Jessica Woytuski • Agência Batatinha™</p>
 
